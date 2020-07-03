@@ -1,0 +1,133 @@
+@import "utilities/variables";
+
+.loginSubsection
+  p
+    margin-top: 20px;
+
+
+
+//*********Classes************
+
+.checkboxes label
+  display: block;
+  padding-right: 10px;
+  padding-left: 22px;
+  text-indent: -22px;
+  font-size: 0.6rem;
+  vertical-align: top;
+  // letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: Gotham-Thin;
+.checkboxes input
+  vertical-align: middle;
+
+.checkboxes label span
+  vertical-align: middle;
+  color: 	#2A2429;
+
+.login-window
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  grid-gap: 20px;
+  gap: 20px;
+  padding: 32.5px 30px 32.5px 30px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 3px 6px 0 rgba(0, 0, 0, 0.01);
+  background-color: #FFF;
+  //max-height: 50%;
+  height: 280px
+  width: 295px
+
+.logo
+  height: 21px;
+  margin-top: 2px
+  margin-left: 2px
+  //height: 32px;
+
+
+.container
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #FAFAFA;
+  // grid-template-columns: repeat(3,1fr);
+
+.emailInput
+  -webkit-appearance: none;
+  width: -webkit-fill-available
+  width: -moz-available;
+  border: 1px solid $lightBorderColour;
+  font-size: 18px;
+  outline: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 5px 16px;
+
+.emailInput:focus
+    -webkit-transition: .25s;
+    background-color: #f3f3f3;
+
+.checkButton
+    margin-right: 7px;
+
+.button
+  margin-top: 15px;
+  background-color: #fff;
+  border: 1px solid $lightBorderColour;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+
+  font-family: Gotham-Thin;
+  font-weight: 700;
+  font-size: 0.75rem;
+
+.button:focus
+  // outline: none;
+  -webkit-transition: .25s;
+  outline-color: #f3f3f3;
+  background: darken(#fafafa,7%);
+  -webkit-transition: box-shadow .2s;
+  transition: box-shadow .2s;
+
+
+
+//*********Media Changes************
+
+@media #{$smallScreens}
+  .login-window
+    max-height: unset;
+    height: 100vh;
+    padding: 0;
+    width: 100vw;
+    grid-template-rows: min-content min-content min-content;
+  .loginSubsection
+    padding: 20px
+  .button
+    width: 100%
+    padding: 20px 24px;
+  .emailInput
+    padding: 18px 16px;
+  .checkboxes label span
+    font-size: 0.8rem;
+  .logo
+    height: 35px;
+
+
+
+//*********Animation******************
+.container
+  animation: .3s ease-in-out both fade-in;
+
+
+@keyframes fade-in
+  0%
+    opacity: 0;
+    transform: scale(0);
+
+
+  100%
+    opacity: 1;
+    transform: scale(1);

@@ -1,0 +1,82 @@
+@import "utilities/variables";
+
+
+//*********Default Element Styling************
+//unset HTML defaults
+*
+  margin: 0;
+  padding: 0;
+
+//Default Family
+body
+  font-family: $font-stack
+
+h1
+  // font-size: 2rem;
+  font-size: 1.4rem;
+  // letter-spacing: -.05em;
+  font-weight: 600;
+  //should take out
+  margin-bottom: 5px;
+  color: #595654;
+  font-family: Gotham-Medium;
+h2
+  // font-size: 1rem;
+  font-size: 0.75rem;
+  color: #b2afb1;
+  // letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: Gotham-Thin;
+
+p
+  font-size: 0.675rem;
+  // letter-spacing: -.05em;
+  color: #818283;
+  font-family: Gotham-Thin;
+  font-weight: 700;
+
+input[type=checkbox]
+    zoom: 1.05;
+    font-family: Gotham-Thin;
+    font-weight: 700;
+
+input[type=checkbox]
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
+    /* create custom checkbox appearance */
+    // display: inline-block;
+    // width: 25px;
+    // height: 25px;
+    /* background-color only for content */
+    // background-clip: content-box;
+    // border: 1.5px solid #aaa;
+    // border-radius: 6px;
+    background-color: #37A9DE;
+
+    // &:checked
+    //     background-color: #ff0000;
+    //
+    //
+    // &:focus
+    //     outline: none !important;
+
+
+
+
+
+//*********Media Changes************
+
+@media #{$smallScreens}
+  h1
+    font-size: 2.5rem;
+  h2
+    font-size: 1.25rem;
+  p
+    font-size: 1.15rem;
+  label
+    font-size: 1.15rem;
+    vertical-align: bottom;
+
+  input[type=checkbox]
+      zoom: 2;
